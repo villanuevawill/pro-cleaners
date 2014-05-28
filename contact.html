@@ -62,16 +62,51 @@
         <h3 class = "endHeading"> Interested in our service?  Let us know :) ! </h3>
 
         <form role = "form" name = "contact" method="get" id = "former">
-          <div class ="form-group">
-                            <label for="firstName">First Name </label>
-                            <input type="name" class = "form-control" name="firstName">
 
           <div class ="form-group">
                             <label for="firstName">First Name </label>
-                            <input type="name" class = "form-control" name="lastName">
+                            <input type="text" class = "form-control" name="firstName" placeholder = "David">
+          </div>
+          <div class ="form-group">
+                            <label for="lastName">Last Name </label>
+                            <input type="text" class = "form-control" name="lastName" placeholder= "Copperfield">
+          </div>
+          <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" placeholder="Enter email">
+          </div>
+          <div class ="form-group">
+          <label for = "time"> Company Size </label>
+          <select class="form-control">
+                            <option>0-10</option>
+                            <option>10-25</option>
+                            <option>25-50</option>
+                            <option>50-100</option>
+                            <option>100+</option>
+          </select>
+          </div>
+          <div class = "form-group">
+          <label for = "text">Tell us about yourself... We'd love to hear! </label>
+          <textarea class="form-control" rows="3" placeholder = "Our info..."></textarea>
+        </div>
+  
+          <div class="radio">
+          <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+           You've convinced me!  I'm ready to get started right now.  
+          </label>
+          </div>
+          <div class="radio">
+          <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+          I'm still just a bit skeptical... Can I please talk with someone to learn more?
+          </label>
+          </div>
+          <div class = "buttonss">
+          <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
           </form>
-          <br>
-          <br>
+
 <!--
                             <label for="email" class="label"> Email </label>
                             <input type ="text" name="email" id="email">

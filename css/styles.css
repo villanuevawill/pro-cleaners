@@ -23,7 +23,13 @@
 	margin-top: 40px;
 	margin-bottom: 20px;
 }
-
+form {
+	text-align: left;
+}
+.buttonss {
+	text-align: center;
+	margin-bottom: 30px;
+}
 /* Sticky footer styles
 -------------------------------------------------- */
 html {
