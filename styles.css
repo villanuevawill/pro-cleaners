@@ -1,10 +1,4 @@
-main {
-	height: 5%;
-}
 
-body {
-  padding-top: 0px;
-}
 .starter-template {
   padding: 40px 15px;
   text-align: center;
@@ -12,12 +6,6 @@ body {
 }
 .mainPhoto {
 	margin-top: 50px;
-}
-
-footer {
-	position: relative;
-	text-align: center;
-	bottom: 0;
 }
 
 #accordion {
@@ -35,3 +23,24 @@ footer {
 	margin-top: 40px;
 	margin-bottom: 20px;
 }
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 10px;
+  text-align: center;
+
+}
+

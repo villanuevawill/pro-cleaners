@@ -46,8 +46,8 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li class = "active"><a href="images.html">Image Gallery </a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="images.html">Image Gallery </a></li>
+            <li class = "active"><a href="contact.html">Contact</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -58,12 +58,56 @@
       <div class="starter-template">
         <h1>Welcome to the future of Commercial Cleaning</h1>
         <p class="lead"> We clean your office using <strong> green supplies </strong> <br> and then we place new artwork on your walls each month</p>
-        <div id = "photoList">
-       </div>
-        <h3 class = "endHeading"> See a sample of our office artwork above.  We're really proud of the work we put into our offices.  Feel free to bookmark this page, as we regularly update these photos. </h3>
 
+        <h3 class = "endHeading"> Interested in our service?  Let us know :) ! </h3>
 
-      <footer class = "navbar navbar-static-bottom">
+        <form role = "form" name = "contact" method="get" id = "former">
+          <div class ="form-group">
+                            <label for="firstName">First Name </label>
+                            <input type="name" class = "form-control" name="firstName">
+
+          <div class ="form-group">
+                            <label for="firstName">First Name </label>
+                            <input type="name" class = "form-control" name="lastName">
+          </form>
+          <br>
+          <br>
+<!--
+                            <label for="email" class="label"> Email </label>
+                            <input type ="text" name="email" id="email">
+                            </p>
+                            <p>
+                                <span class="label"> Age Range </span>
+                                <label class="label">
+                                    <input name="age" type="radio" value="18-25">
+                                    18-25</label>
+                                <label class="label">
+                                    <input name="age" type="radio" value="25-35">
+                                    25-35</label>
+                                <label class="label">
+                                    <input name="age" type="radio" value="35+">
+                                    35+</label>
+                                </p>
+                            <p>
+                                <label for="comments" class="label"> How Can We Help You? </label>
+                                <textarea name="comments" cols="35" rows="4" id="comments"></textarea>
+                                </p>
+                                <p>
+                                <label for="refer" class="label"> Where did you hear about us? </label>
+                                <select name="refer" id="refer">
+                                    <option value="null">Select One</option>
+                                    <option value="1">Friend</option>
+                                    <option value="2">Google</option>
+                                    <option value="3">Online Advertisement</option>
+                                    <option value="4">Other</option>
+                                    </select>
+                                </p>
+                                <p>
+                                <input type="submit" value="Submit">
+                                    </p>
+                                  -->
+
+      <footer>
       	<p> A San Francisco based cleaning company. </p>
       	<p> Please <a href = "#"> stay in touch </p>
       </footer>
@@ -76,26 +120,5 @@
     <script src="vendor/jquery-1.10.2.js"></script>
     <script src="vendor/bootstrap.min.js"></script>
     <script src="vendor/jquery-ui-1.10.4.custom.min.js"></script>
-    <script>
-   $(function() {
-    var params = {
-                   type: "GET",
-                  url: "http://api.flickr.com/services/feeds/photos_public.gne?id=53805623@N02&format=json&jsoncallback=?&tags=OfficeArt", 
-                  dataType:"json", 
-                  success: function(response){
-                                                html = "";
-                                                $.each(response.items, function(i, item){
-                                                    html += "<a href =" +item.media.m.slice(0,item.media.m.length - 6)+ ".jpg data-lightbox = officeArt>";
-                                                    html += "<img src =" +item.media.m.slice(0,item.media.m.length - 6)+ ".jpg height = 100px>";
-
-                                                });
-                                                $("#photoList").html(html);
-                                                }};
-    $.ajax(params);
-
-    
-  });
-  </script>
-  <script src="vendor/lightbox.min.js"></script>
   </body>
 </html>
