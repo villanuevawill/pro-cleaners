@@ -58,13 +58,9 @@
       <div class="starter-template">
         <h1>Welcome to the future of Commercial Cleaning</h1>
         <p class="lead"> We clean your office using <strong> green supplies </strong> <br> and then we place new artwork on your walls each month</p>
-
-        <a href="art1.jpg" data-lightbox="roadtrip"><img src = "art1.jpg" height = "100px"></a>
-        <a href="art2.jpg" data-lightbox="roadtrip"><img src = "art2.jpg" height = "100px"></a>
-        <a href="art3.jpg" data-lightbox="roadtrip"><img src = "art3.jpg" height = "100px"></a>
-
-        <h3> See a sample of our office artwork above.  We're really proud of the work we put into our offices.  Feel free to bookmark this page, as we regularly update these photos. </h3>
-        
+        <div id = "photoList">
+       </div>
+        <h3 class = "endHeading"> See a sample of our office artwork above.  We're really proud of the work we put into our offices.  Feel free to bookmark this page, as we regularly update these photos. </h3>
 
 
       <footer class = "navbar navbar-static-bottom">
@@ -80,11 +76,26 @@
     <script src="vendor/jquery-1.10.2.js"></script>
     <script src="vendor/bootstrap.min.js"></script>
     <script src="vendor/jquery-ui-1.10.4.custom.min.js"></script>
-    <script src="vendor/lightbox.min.js"></script>
-      <script>
-  $(function() {
-    $( "#accordion" ).accordion();
+    <script>
+   $(function() {
+    var params = {
+                   type: "GET",
+                  url: "http://api.flickr.com/services/feeds/photos_public.gne?id=53805623@N02&format=json&jsoncallback=?&tags=OfficeArt", 
+                  dataType:"json", 
+                  success: function(response){
+                                                html = "";
+                                                $.each(response.items, function(i, item){
+                                                    html += "<a href =" +item.media.m.slice(0,item.media.m.length - 6)+ ".jpg data-lightbox = officeArt>";
+                                                    html += "<img src =" +item.media.m.slice(0,item.media.m.length - 6)+ ".jpg height = 100px>";
+
+                                                });
+                                                $("#photoList").html(html);
+                                                }};
+    $.ajax(params);
+
+    
   });
   </script>
+  <script src="vendor/lightbox.min.js"></script>
   </body>
 </html>
