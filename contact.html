@@ -7,15 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="stylesheet" href="vendor/jquery-ui-1.10.4.custom.min.css">
-
+    <link rel="stylesheet" href="css/jquery-ui-1.10.4.custom.min.css">
+    <link rel="stylesheet" href="css/styles.css" />
 
     <title> So Clean - A Commercial Cleaning Service </title>
-    <link rel="stylesheet" href="css/styles.css" />
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/lightbox.css" rel="stylesheet" />
+    <!-- Bootstrap validator CSS -->
+    <link href="css/bootstrapValidator.min.css">
+
+
 
     <!-- Custom styles for this template -->
 
@@ -56,28 +58,30 @@
     <div class="container">
 
       <div class="starter-template">
+        <div class = "text">
         <h1>Welcome to the future of Commercial Cleaning</h1>
         <p class="lead"> We clean your office using <strong> green supplies </strong> <br> and then we place new artwork on your walls each month</p>
 
         <h3 class = "endHeading"> Interested in our service?  Let us know :) ! </h3>
+      </div>
 
-        <form role = "form" name = "contact" method="get" id = "former">
+        <form role = "form" name = "contact" method="POST" id = "contact">
 
           <div class ="form-group">
                             <label for="firstName">First Name </label>
-                            <input type="text" class = "form-control" name="firstName" placeholder = "David">
+                            <input type="text" class ="form-control" name="firstName" placeholder = "George">
           </div>
           <div class ="form-group">
                             <label for="lastName">Last Name </label>
-                            <input type="text" class = "form-control" name="lastName" placeholder= "Copperfield">
+                            <input type="text" class = "form-control" name="lastName" placeholder= "Washington">
           </div>
           <div class="form-group">
                             <label for="email">Email address</label>
-                            <input type="email" class="form-control" placeholder="Enter email">
+                            <input type="email" class="form-control" placeholder="Enter email" name="email">
           </div>
           <div class ="form-group">
-          <label for = "time"> Company Size </label>
-          <select class="form-control">
+          <label for = "size"> Company Size </label>
+          <select class="form-control" name="size">
                             <option>0-10</option>
                             <option>10-25</option>
                             <option>25-50</option>
@@ -86,74 +90,47 @@
           </select>
           </div>
           <div class = "form-group">
-          <label for = "text">Tell us about yourself... We'd love to hear! </label>
-          <textarea class="form-control" rows="3" placeholder = "Our info..."></textarea>
+          <label for = "about">Tell us about yourself... We'd love to hear! </label>
+          <textarea class="form-control" rows="3" placeholder = "Our info..." name="about"></textarea>
         </div>
-  
+          <div class = "form-group">
           <div class="radio">
           <label>
-          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+          <input type="radio" name="interest" value="yes" checked>
            You've convinced me!  I'm ready to get started right now.  
           </label>
           </div>
           <div class="radio">
           <label>
-          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+          <input type="radio" name="interest" value="maybe">
           I'm still just a bit skeptical... Can I please talk with someone to learn more?
           </label>
           </div>
-          <div class = "buttonss">
+        </div>
+          <br>
+          <div class = "form-group buttonss">
           <button type="submit" class="btn btn-primary">Submit</button>
           </div>
           </form>
+      <div id="success"></div>
+    </div>
+  </div>
 
-<!--
-                            <label for="email" class="label"> Email </label>
-                            <input type ="text" name="email" id="email">
-                            </p>
-                            <p>
-                                <span class="label"> Age Range </span>
-                                <label class="label">
-                                    <input name="age" type="radio" value="18-25">
-                                    18-25</label>
-                                <label class="label">
-                                    <input name="age" type="radio" value="25-35">
-                                    25-35</label>
-                                <label class="label">
-                                    <input name="age" type="radio" value="35+">
-                                    35+</label>
-                                </p>
-                            <p>
-                                <label for="comments" class="label"> How Can We Help You? </label>
-                                <textarea name="comments" cols="35" rows="4" id="comments"></textarea>
-                                </p>
-                                <p>
-                                <label for="refer" class="label"> Where did you hear about us? </label>
-                                <select name="refer" id="refer">
-                                    <option value="null">Select One</option>
-                                    <option value="1">Friend</option>
-                                    <option value="2">Google</option>
-                                    <option value="3">Online Advertisement</option>
-                                    <option value="4">Other</option>
-                                    </select>
-                                </p>
-                                <p>
-                                <input type="submit" value="Submit">
-                                    </p>
-                                  -->
-
-      <footer>
-      	<p> A San Francisco based cleaning company. </p>
-      	<p> Please <a href = "#"> stay in touch </p>
-      </footer>
+      <div id = "footer">
+        <div class = "container">
+        <p> A San Francisco based cleaning company. </p>
+        <p> Please <a href = "contact.html"> contact us </a> at any time </p>
+      </div>
+    </div>
 	
 
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="vendor/jquery-1.10.2.js"></script>
+    <script src="vendor/jquery-1.11.0.min.js"></script>
     <script src="vendor/bootstrap.min.js"></script>
-    <script src="vendor/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="vendor/bootstrapValidator.min.js"></script>
+    <script src="js/contact.js"></script>
   </body>
 </html>
