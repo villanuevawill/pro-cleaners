@@ -1,3 +1,8 @@
+/*
+  William Villanueva
+  Adv Website Design & Mgmt
+  Spring Quarter 2014
+*/
 $(function(){
 
 $('#contact').bootstrapValidator({
